@@ -1,0 +1,64 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>HOSPIHUB — Smart Hospitality</title>
+<style>
+*{box-sizing:border-box}body{margin:0;font-family:Inter,Arial,sans-serif;background:#f4f7fb;color:#172033}button,input,textarea,select{font:inherit}.app{display:flex;min-height:100vh}.side{width:245px;background:#102a56;color:white;padding:25px 16px;position:fixed;inset:0 auto 0 0}.brand{font-size:24px;font-weight:800;padding:0 12px 28px}.brand small{display:block;font-size:11px;opacity:.6;margin-top:4px}.nav button{width:100%;border:0;background:transparent;color:#dbeafe;text-align:left;padding:13px 14px;border-radius:12px;margin:3px 0;cursor:pointer}.nav button.active,.nav button:hover{background:#ffffff1c;color:white}.main{margin-left:245px;width:calc(100% - 245px);padding:28px;max-width:1400px}.top{display:flex;justify-content:space-between;align-items:center;margin-bottom:25px}.top h1{margin:0;font-size:28px}.user{background:white;padding:10px 15px;border-radius:30px;box-shadow:0 5px 20px #0000000b}.page{display:none}.page.active{display:block}.hero{background:linear-gradient(135deg,#17479a,#2563eb);color:white;border-radius:24px;padding:34px;display:flex;justify-content:space-between;gap:20px;align-items:center}.hero h2{font-size:34px;margin:0 0 8px}.hero p{opacity:.9;max-width:650px}.btn{border:0;border-radius:11px;padding:11px 16px;font-weight:700;cursor:pointer}.primary{background:#fff;color:#17479a}.blue{background:#2563eb;color:#fff}.light{background:#eef3fa;color:#172033}.cards{display:grid;grid-template-columns:repeat(auto-fit,minmax(210px,1fr));gap:16px;margin-top:20px}.card{background:white;border:1px solid #e7ebf2;border-radius:18px;padding:20px;box-shadow:0 8px 25px #00000008}.service{cursor:pointer;transition:.18s}.service:hover{transform:translateY(-3px);box-shadow:0 14px 30px #00000010}.ico{font-size:30px}.card h3{margin:9px 0 5px}.muted{color:#6b7280;font-size:14px}.stat{font-size:27px;font-weight:800}.section{margin-top:25px}.section h2{margin-bottom:13px}.table{background:white;border-radius:18px;padding:5px 18px}.row{display:flex;justify-content:space-between;gap:10px;padding:16px 0;border-bottom:1px solid #edf0f4}.row:last-child{border:0}.tag{padding:5px 9px;border-radius:20px;background:#e8f7ef;color:#147a43;font-size:12px;font-weight:700}label{font-weight:700;font-size:13px}input,textarea,select{width:100%;border:1px solid #dfe5ee;border-radius:10px;padding:12px;margin:7px 0 15px;background:white}.form{max-width:650px;background:white;padding:25px;border-radius:20px}.menu{display:grid;grid-template-columns:repeat(auto-fit,minmax(230px,1fr));gap:15px}.price{font-weight:800}.cart{background:#eef4ff;padding:16px;border-radius:15px;margin-top:15px}.chat{height:330px;overflow:auto;background:#f8fafc;border-radius:15px;padding:15px}.bubble{padding:10px 13px;border-radius:14px;margin:8px 0;max-width:80%;background:#e8eef8}.me{margin-left:auto;background:#2563eb;color:#fff}.chatbar{display:flex;gap:8px;margin-top:10px}.chatbar input{margin:0}.key{background:linear-gradient(145deg,#0f172a,#1e3a8a);color:white;text-align:center;border-radius:22px;padding:35px;max-width:420px}.key .num{font-size:52px;font-weight:900;letter-spacing:3px}.stars{font-size:34px;cursor:pointer;letter-spacing:4px}.toast{position:fixed;right:20px;bottom:20px;background:#172033;color:white;padding:14px 18px;border-radius:12px;display:none}.mobile{display:none}
+@media(max-width:760px){.side{width:70px;padding:18px 8px}.brand{font-size:0;text-align:center}.brand:before{content:"🏨";font-size:25px}.brand small{display:none}.nav button{font-size:0;text-align:center}.nav button:before{font-size:21px}.nav button:nth-child(1):before{content:"⌂"}.nav button:nth-child(2):before{content:"📲"}.nav button:nth-child(3):before{content:"🍽️"}.nav button:nth-child(4):before{content:"🏨"}.nav button:nth-child(5):before{content:"🤖"}.nav button:nth-child(6):before{content:"🔑"}.nav button:nth-child(7):before{content:"⭐"}.nav button:nth-child(8):before{content:"👤"}.main{margin-left:70px;width:calc(100% - 70px);padding:16px}.hero{display:block}.hero h2{font-size:27px}.top h1{font-size:22px}}
+</style>
+</head>
+<body>
+<div class="app">
+<aside class="side"><div class="brand">HOSPIHUB<small>SMART HOSPITALITY</small></div>
+<div class="nav">
+<button class="active" onclick="show('home',this)">Dashboard</button>
+<button onclick="show('checkin',this)">Digital Check-in</button>
+<button onclick="show('food',this)">Room Service</button>
+<button onclick="show('facilities',this)">Hotel Facilities</button>
+<button onclick="show('concierge',this)">AI Concierge</button>
+<button onclick="show('key',this)">Digital Key</button>
+<button onclick="show('feedback',this)">Feedback</button>
+<button onclick="show('profile',this)">Guest Profile</button>
+</div></aside>
+<main class="main">
+<div class="top"><h1 id="title">Guest Dashboard</h1><div class="user">👤 Alex Santos · Room 508</div></div>
+
+<section id="home" class="page active">
+<div class="hero"><div><h2>Welcome to HOSPIHUB 👋</h2><p>Your digital hospitality assistant. Manage your stay, request services, explore facilities, and get instant assistance.</p><button class="btn primary" onclick="show('checkin')">Start Check-in →</button></div><div style="font-size:90px">🏨</div></div>
+<div class="cards"><div class="card"><div class="muted">Current Room</div><div class="stat">508</div><span class="tag">Occupied</span></div><div class="card"><div class="muted">Check-out</div><div class="stat">10:00 AM</div><span class="muted">September 26</span></div><div class="card"><div class="muted">Wi-Fi</div><div class="stat">Connected</div><span class="tag">Secure</span></div></div>
+<div class="section"><h2>Quick Services</h2><div class="cards">
+<div class="card service" onclick="show('food')"><div class="ico">🍽️</div><h3>Order Food</h3><p class="muted">Browse room service menu.</p></div>
+<div class="card service" onclick="quick('Housekeeping requested.')"><div class="ico">🧹</div><h3>Housekeeping</h3><p class="muted">Request room cleaning.</p></div>
+<div class="card service" onclick="quick('Extra towels requested.')"><div class="ico">🧺</div><h3>Extra Towels</h3><p class="muted">Request fresh towels.</p></div>
+<div class="card service" onclick="show('concierge')"><div class="ico">🤖</div><h3>Ask Concierge</h3><p class="muted">Get instant answers.</p></div>
+</div></div></section>
+
+<section id="checkin" class="page"><div class="form"><h2>📲 Digital Check-in</h2><p class="muted">Complete your arrival details digitally.</p><label>Reservation Number</label><input id="reservation" placeholder="HPH-50821"><label>Last Name</label><input id="lastname" placeholder="Santos"><label>Arrival preference</label><select><option>Standard check-in</option><option>Express check-in</option></select><button class="btn blue" onclick="checkin()">Complete Check-in</button><div id="checkmsg"></div></div></section>
+
+<section id="food" class="page"><h2>🍽️ Room Service</h2><p class="muted">Choose food and guest services for Room 508.</p><div class="menu" id="menu"></div><div class="cart"><b>🛒 Demo Order</b><div id="cart">Your cart is empty.</div></div></section>
+
+<section id="facilities" class="page"><h2>🏨 Hotel Facilities</h2><div class="cards"><div class="card"><div class="ico">🍳</div><h3>Lobby Restaurant</h3><p class="muted">Breakfast · 6:00–10:00 AM</p></div><div class="card"><div class="ico">🏊</div><h3>Swimming Pool</h3><p class="muted">2nd Floor · 7:00 AM–9:00 PM</p></div><div class="card"><div class="ico">💪</div><h3>Fitness Center</h3><p class="muted">3rd Floor · 6:00 AM–10:00 PM</p></div><div class="card"><div class="ico">💼</div><h3>Function Rooms</h3><p class="muted">4th Floor · By reservation</p></div></div></section>
+
+<section id="concierge" class="page"><h2>🤖 AI Concierge</h2><p class="muted">Ask about hotel services and facilities.</p><div class="chat" id="chat"><div class="bubble">Hello! I'm HOSPIHUB Concierge. How can I help you today?</div></div><div class="chatbar"><input id="chatinput" placeholder="Ask: What time is breakfast?"><button class="btn blue" onclick="chat()">Send</button></div></section>
+
+<section id="key" class="page"><h2>🔑 Digital Room Key</h2><div class="key"><div style="font-size:45px">🔐</div><p>ROOM</p><div class="num">508</div><p>Alex Santos · Valid during current stay</p><button class="btn primary" onclick="quick('Digital room key activated for Room 508.')">Activate Demo Key</button></div></section>
+
+<section id="feedback" class="page"><div class="form"><h2>⭐ Guest Feedback</h2><p class="muted">Help us improve the guest experience.</p><label>Rating</label><div class="stars" id="stars">☆ ☆ ☆ ☆ ☆</div><label>Comments</label><textarea id="comment" rows="5" placeholder="Tell us about your stay..."></textarea><button class="btn blue" onclick="feedback()">Submit Feedback</button><div id="feedmsg"></div></div></section>
+
+<section id="profile" class="page"><div class="form"><h2>👤 Guest Profile</h2><label>Guest Name</label><input value="Alex Santos"><label>Room</label><input value="508" disabled><label>Stay Dates</label><input value="September 24–26, 2026"><label>Preference</label><select><option>Extra towels</option><option>Quiet room</option><option>Late breakfast</option></select><button class="btn blue" onclick="quick('Guest profile updated.')">Save Preferences</button></div></section>
+</main></div><div class="toast" id="toast"></div>
+<script>
+const titles={home:'Guest Dashboard',checkin:'Digital Check-in',food:'Room Service',facilities:'Hotel Facilities',concierge:'AI Concierge',key:'Digital Room Key',feedback:'Guest Feedback',profile:'Guest Profile'};
+function show(id,btn){document.querySelectorAll('.page').forEach(x=>x.classList.remove('active'));document.getElementById(id).classList.add('active');document.getElementById('title').textContent=titles[id];document.querySelectorAll('.nav button').forEach(x=>x.classList.remove('active'));if(btn)btn.classList.add('active');}
+function quick(msg){let t=document.getElementById('toast');t.textContent='✓ '+msg;t.style.display='block';setTimeout(()=>t.style.display='none',2500)}
+function checkin(){document.getElementById('checkmsg').innerHTML='<div style="margin-top:15px;padding:13px;border-radius:10px;background:#e8f7ef;color:#147a43">✓ Check-in completed! Welcome to HOSPIHUB.</div>';quick('Check-in completed.')}
+const items=[['Chicken Adobo Rice Bowl','₱280','🍗'],['Clubhouse Sandwich','₱320','🥪'],['Fresh Mango Shake','₱160','🥭'],['Extra Towels','FREE','🧺']];
+let cart=[];
+document.getElementById('menu').innerHTML=items.map((x,i)=>`<div class="card"><div class="ico">${x[2]}</div><h3>${x[0]}</h3><p class="price">${x[1]}</p><button class="btn blue" onclick="add(${i})">Add to Order</button></div>`).join('');
+function add(i){cart.push(items[i][0]);document.getElementById('cart').innerHTML=cart.map(x=>'• '+x).join('<br>')+`<br><br><button class="btn blue" onclick="quick('Room service order submitted.')">Place Order</button>`}
+function chat(){let input=document.getElementById('chatinput'),q=input.value.trim();if(!q)return;let c=document.getElementById('chat');c.innerHTML+=`<div class="bubble me">${q}</div>`;let a='I can help with check-in, room service, hotel facilities, Wi-Fi, and common guest requests.';let l=q.toLowerCase();if(l.includes('breakfast'))a='Breakfast is available from 6:00 AM to 10:00 AM at the Lobby Restaurant.';else if(l.includes('pool'))a='The swimming pool is on the 2nd Floor and is open 7:00 AM–9:00 PM.';else if(l.includes('wifi'))a='Connect to HOSPIHUB_GUEST. The demo password is on your room information card.';setTimeout(()=>{c.innerHTML+=`<div class="bubble">${a}</div>`;c.scrollTop=c.scrollHeight},250);input.value=''}
+document.getElementById('stars').onclick=function(){this.textContent='★ ★ ★ ★ ★';quick('5-star rating selected.')}
+function feedback(){document.getElementById('feedmsg').innerHTML='<div style="margin-top:15px;padding:13px;border-radius:10px;background:#e8f7ef;color:#147a43">✓ Thank you! Your feedback has been submitted.</div>'}
+</script>
+</body></html>
